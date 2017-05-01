@@ -3,7 +3,7 @@
 namespace Lakion\CmsPlugin\Form\Type;
 
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
-use Sylius\Bundle\TaxonomyBundle\Form\Type\TaxonAutocompleteChoiceType;
+use Sylius\Bundle\TaxonomyBundle\Form\Type\TaxonChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -31,7 +31,7 @@ final class TaxonBlockType extends AbstractResourceType
             ->add('image', FileType::class, [
                 'label' => 'lakion_cms.form.taxon_block.image',
             ])
-            ->add('taxon', TaxonAutocompleteChoiceType::class, [
+            ->add('taxon', TaxonChoiceType::class, [
                 'label' => 'lakion_cms.form.taxon_block.taxon',
                 'multiple' => false,
                 'required' => true,

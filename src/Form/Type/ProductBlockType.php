@@ -2,7 +2,7 @@
 
 namespace Lakion\CmsPlugin\Form\Type;
 
-use Sylius\Bundle\ProductBundle\Form\Type\ProductAutocompleteChoiceType;
+use Sylius\Bundle\ProductBundle\Form\Type\ProductChoiceType;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -31,7 +31,7 @@ final class ProductBlockType extends AbstractResourceType
             ->add('image', FileType::class, [
                 'label' => 'lakion_cms.form.product_block.image',
             ])
-            ->add('product', ProductAutocompleteChoiceType::class, [
+            ->add('product', ProductChoiceType::class, [
                 'label' => 'lakion_cms.form.product_block.product',
                 'multiple' => false,
                 'required' => true,
